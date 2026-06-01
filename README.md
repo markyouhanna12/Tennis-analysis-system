@@ -68,8 +68,3 @@ Set `read_from_stub=True` in `PlayerTracker.detect_frames` / `BallTracker.detect
 ## Training notes
 - `tennis_ball_detector_training.ipynb` contains a YOLO training workflow for the ball detector.
 - Court keypoint model loading expects a 14-point (x,y) regressor; replace `models/keypoints_model_50.pth` if you retrain.
-
-## Tips
-- GPU execution significantly speeds up YOLO and ResNet inference.
-- If court keypoints look misaligned, verify the input aspect ratio and consider resizing logic consistent with the training setup.
-- Adjust YOLO confidence thresholds in `trackers/ball_tracker.py` and `trackers/player_tracker.py` for your footage quality.
